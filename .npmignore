@@ -1,3 +1,5 @@
+__tests__
+build.sh
 samples
 .github
 .gitignore

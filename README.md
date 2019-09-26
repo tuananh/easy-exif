@@ -1,7 +1,7 @@
 easy-exif
 =========
 
-Tiny EXIF reader for Node.js in WebAssembly.
+Tiny [EXIF](https://en.wikipedia.org/wiki/Exif) reader for Node.js in WebAssembly.
 
 ## Installation
 
