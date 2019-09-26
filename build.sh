@@ -4,6 +4,8 @@ set -e
 
 export OPTIMIZE="-O3"
 
+mkdir -p dist
+
 echo "1/1 compiling tiny-exif"
 (
   emcc \
