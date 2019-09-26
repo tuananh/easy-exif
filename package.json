@@ -1,6 +1,6 @@
 {
   "name": "easy-exif",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "tiny EXIF reader in WebAssembly",
   "main": "index.js",
   "scripts": {
