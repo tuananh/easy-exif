@@ -23,7 +23,7 @@ const { exif } = require('easy-exif')
 const fs = require('fs').promises
 
 const buf = await fs.readFileSync('./samples/crosa.jpg')
-console.log(await exif(buf)
+console.log(await exif(buf))
 ```
 
 Sample output
