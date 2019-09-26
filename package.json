@@ -1,18 +1,18 @@
 {
-  "name": "tiny-exif",
+  "name": "easy-exif",
   "version": "1.0.0",
-  "description": "tiny exif reader in WebAssembly",
+  "description": "tiny EXIF reader in WebAssembly",
   "main": "index.js",
   "scripts": {
     "install-deps": "npx napa",
-    "test": "jest",
+    "test": "tape __tests__/*.test.js",
     "build": "docker run --rm -v $(pwd):/src trzeci/emscripten ./build.sh"
   },
   "author": "Tuan Anh Tran <me@tuananh.org> (https://tuananh.org)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0",
-    "napa": "^3.0.0"
+    "napa": "^3.0.0",
+    "tape": "^4.11.0"
   },
   "napa": {
     "easyexif": "mayanklahiri/easyexif#master"

@@ -73,7 +73,7 @@ val exif(std::string raw_image, unsigned long size)
   return output;
 }
 
-EMSCRIPTEN_BINDINGS(my_module)
+EMSCRIPTEN_BINDINGS(easyexif)
 {
   function("exif", &exif);
 }

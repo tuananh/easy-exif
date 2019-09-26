@@ -1,6 +1,5 @@
-const fs = require('fs')
 const assert = require('assert')
-const Module = require('./dist/easyexif')
+const Module = require(__dirname + '/dist/easyexif')
 
 let cachedInstance
 const instance = Module()
@@ -27,7 +26,7 @@ function callWasmBinding(methodName, ...args) {
  */
 async function exif(buf) {
     assert(buf instanceof Buffer, 'first argument must be instance of Buffer')
-
+    
     return callWasmBinding('exif', buf.buffer, buf.buffer.byteLength)
 }
 
