@@ -1,4 +1,5 @@
-const fs = require('fs').promises
+const fs = require('fs')
+const assert = require('assert')
 const Module = require('./dist/easyexif')
 
 let cachedInstance
@@ -19,13 +20,15 @@ function callWasmBinding(methodName, ...args) {
     })
 }
 
-async function exif() {
-    const buf = await fs.readFile(__dirname + '/samples/crosa.jpg')
-    console.log(buf.buffer);
+/**
+ * extract EXIF meta data from image buffer
+ * @param {Buffer} buf file buffer
+ * @returns {object} metadata object
+ */
+async function exif(buf) {
+    assert(buf instanceof Buffer, 'first argument must be instance of Buffer')
 
     return callWasmBinding('exif', buf.buffer, buf.buffer.byteLength)
 }
-
-exif().then(console.log)
 
 module.exports = { exif }
