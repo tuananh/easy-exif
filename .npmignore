@@ -1,0 +1,12 @@
+samples
+.github
+.gitignore
+.DS_Store
+npm-debug.log
+node_modules
+.travis.yml
+appveyor.yml
+test
+examples
+src
+.vscode
