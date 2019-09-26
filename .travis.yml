@@ -3,6 +3,8 @@ notifications:
 
 language: node_js
 
+dist: trusty
+
 os:
   - linux
   # - osx
