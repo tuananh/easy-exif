@@ -20,9 +20,9 @@ npm install easy-exif
 
 ```js
 const { exif } = require('easy-exif')
-const fs = require('fs').promises
+const fs = require('fs')
 
-const buf = await fs.readFile('./samples/crosa.jpg')
+const buf = fs.readFileSync('./samples/crosa.jpg')
 console.log(await exif(buf))
 ```
 
