@@ -1,0 +1,38 @@
+notifications:
+  email: false
+
+language: node_js
+
+os:
+  - linux
+  # - osx
+  # - windows
+
+sudo: required
+
+services:
+  - docker
+
+node_js:
+  - '8'
+  - '9'
+  - '10'
+  - '11'
+  - '12'
+
+cache:
+  directories:
+    - $HOME/.npm
+
+before_install:
+  - echo $TRAVIS_BRANCH
+  - echo `git describe --tags --always HEAD`
+  - npm config set progress false
+  - npm config set spin false
+  - npm install
+  - npm run install-deps
+  - docker run -dit --name emscripten -v $(pwd):/src trzeci/emscripten:sdk-incoming-64bit bash
+
+script:
+  - docker exec -it emscripten npm run build
+  - npm test
