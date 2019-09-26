@@ -3,7 +3,7 @@ easy-exif
 
 [![npm](https://badgen.net/npm/v/easy-exif)](https://npm.im/easy-exif)
 ![npm bundle size](https://badgen.net/packagephobia/publish/easy-exif)
-
+[![Travis](https://badgen.net/travis/tuananh/easy-exif/develop)](https://travis-ci.org/tuananh/easy-exif)
 
 Tiny [EXIF](https://en.wikipedia.org/wiki/Exif) metadata reader for Node.js in WebAssembly.
 
