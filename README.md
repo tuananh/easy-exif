@@ -1,7 +1,14 @@
 easy-exif
 =========
 
-Tiny [EXIF](https://en.wikipedia.org/wiki/Exif) reader for Node.js in WebAssembly.
+[![npm](https://badgen.net/npm/v/easy-exif)](https://npm.im/easy-exif)
+![npm bundle size](https://badgen.net/packagephobia/publish/easy-exif)
+
+
+Tiny [EXIF](https://en.wikipedia.org/wiki/Exif) metadata reader for Node.js in WebAssembly.
+
+- Zero dependencies.
+- 7.5 kB gzipped.
 
 ## Installation
 
